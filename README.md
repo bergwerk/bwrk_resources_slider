@@ -1,5 +1,5 @@
 *****************************************************
-*** Example
+*** 1. TypoScript Definition
 *****************************************************
 
 lib.resources_slider >
@@ -9,3 +9,10 @@ lib.resources_slider {
     extensionName = BwrkResourcesSlider
     pluginName = Pi1
 }
+
+
+*****************************************************
+*** 2. Fluid Call
+*****************************************************
+
+<f:cObject typoscriptObjectPath="lib.resources_slider" />
