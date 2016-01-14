@@ -29,7 +29,7 @@
 
 $EM_CONF[$_EXTKEY] = array(
     'title' => 'BERGWERK Resources Slider',
-    'description' => 'Renders page media resources for slide use.',
+    'description' => 'Renders page media resources recursively in fluid for slide use.',
     'category' => 'plugin',
     'author' => 'BERGWERK[GD]',
     'author_email' => 'gd@bergwerk.ag',
@@ -44,7 +44,7 @@ $EM_CONF[$_EXTKEY] = array(
     'modify_tables' => '',
     'clearCacheOnLoad' => 0,
     'lockType' => '',
-    'version' => '1.1.2',
+    'version' => '1.1.3',
     'constraints' => array(
         'depends' => array(
             'typo3' => '6.2.0-7.6.99'
