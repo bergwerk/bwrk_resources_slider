@@ -8,6 +8,6 @@ if (!defined('TYPO3_MODE')) die ('Access denied.');
         'View' => 'index'
     ),
     array(
-        'View' => 'index'
+//        'View' => 'index'
     )
 );
