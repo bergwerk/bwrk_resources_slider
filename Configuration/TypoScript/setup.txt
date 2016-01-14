@@ -1,4 +1,4 @@
-plugin.tx_bwrkfluidmenu {
+plugin.tx_bwrkresourcesslider {
 	view {
 		templateRootPath = EXT:bwrk_resources_slider/Resources/Private/Templates/
 		layoutRootPath = EXT:bwrk_resources_slider/Resources/Private/Layouts/

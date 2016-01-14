@@ -10,14 +10,14 @@ $EM_CONF[$_EXTKEY] = array(
 	'shy' => '',
 	'priority' => '',
 	'module' => '',
-	'state' => 'beta',
+	'state' => 'stable',
 	'internal' => '',
 	'uploadfolder' => '0',
 	'createDirs' => '',
 	'modify_tables' => '',
 	'clearCacheOnLoad' => 0,
 	'lockType' => '',
-	'version' => '0.0.4',
+	'version' => '1.0.0',
 	'constraints' => array(
 		'depends' => array(
 		),
@@ -27,5 +27,3 @@ $EM_CONF[$_EXTKEY] = array(
 		),
 	),
 );
-
-?>

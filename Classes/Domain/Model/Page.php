@@ -2,8 +2,7 @@
 
 namespace BERGWERK\BwrkResourcesSlider\Domain\Model;
 
-use BERGWERK\BwrkFluidmenu\Domain\Repository\PageRepository;
-use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
+use BERGWERK\BwrkResourcesSlider\Domain\Repository\PageRepository;
 
 class Page extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
@@ -17,7 +16,12 @@ class Page extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     protected $pid = 0;
 
-    protected $subPages;
+
+    /**
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
+     */
+    protected $media;
+
 
     /**
      * @return string
@@ -51,22 +55,21 @@ class Page extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
         $this->pid = $pid;
     }
 
-
-
-    public function getHasSubpages()
+    /**
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference> $media
+     */
+    public function getMedia()
     {
-        $this->getSubpages();
-
-        return count($this->subPages) > 0;
+        return $this->media;
     }
 
-    public function getSubpages()
+    /**
+     * @param \TYPO3\CMS\Core\Resource\FileReference $media
+     */
+    public function setMedia($media)
     {
-        if (is_null($this->subPages))
-        {
-            $this->subPages = PageRepository::create()->findPagesByPid($this->getUid());
-        }
-
-        return $this->subPages;
+        $this->media = $media;
     }
+
+
 }
