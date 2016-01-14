@@ -22,35 +22,34 @@
  *
  *  This copyright notice MUST APPEAR in all copies of the script!
  *
- * @author	Georg Dümmler <gd@bergwerk.ag>
- * @package	TYPO3
- * @subpackage	bwrk_resources_slider
+ * @author    Georg Dümmler <gd@bergwerk.ag>
+ * @package    TYPO3
+ * @subpackage    bwrk_resources_slider
  ***************************************************************/
 
 $EM_CONF[$_EXTKEY] = array(
-	'title' => 'BERGWERK Resources Slider',
-	'description' => 'Renders page media resources for slide use.',
-	'category' => 'plugin',
-	'author' => 'BERGWERK[GD]',
-	'author_email' => 'gd@bergwerk.ag',
-	'author_company' => 'www.bergwerk.ag',
-	'shy' => '',
-	'priority' => '',
-	'module' => '',
-	'state' => 'stable',
-	'internal' => '',
-	'uploadfolder' => '0',
-	'createDirs' => '',
-	'modify_tables' => '',
-	'clearCacheOnLoad' => 0,
-	'lockType' => '',
-	'version' => '1.1.1',
-	'constraints' => array(
-		'depends' => array(
-		),
-		'conflicts' => array(
-		),
-		'suggests' => array(
-		),
-	),
+    'title' => 'BERGWERK Resources Slider',
+    'description' => 'Renders page media resources for slide use.',
+    'category' => 'plugin',
+    'author' => 'BERGWERK[GD]',
+    'author_email' => 'gd@bergwerk.ag',
+    'author_company' => 'www.bergwerk.ag',
+    'shy' => '',
+    'priority' => '',
+    'module' => '',
+    'state' => 'stable',
+    'internal' => '',
+    'uploadfolder' => '0',
+    'createDirs' => '',
+    'modify_tables' => '',
+    'clearCacheOnLoad' => 0,
+    'lockType' => '',
+    'version' => '1.1.2',
+    'constraints' => array(
+        'depends' => array(
+            'typo3' => '6.2.0-7.6.99'
+        ),
+        'conflicts' => array(),
+        'suggests' => array(),
+    ),
 );

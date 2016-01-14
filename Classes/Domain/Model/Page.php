@@ -46,7 +46,6 @@ class Page extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     protected $media;
 
-
     /**
      * @return int
      */
@@ -56,27 +55,10 @@ class Page extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
-     * @param int $pid
-     */
-    public function setPid($pid)
-    {
-        $this->pid = $pid;
-    }
-
-    /**
      * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference> $media
      */
     public function getMedia()
     {
         return $this->media;
     }
-
-    /**
-     * @param \TYPO3\CMS\Core\Resource\FileReference $media
-     */
-    public function setMedia($media)
-    {
-        $this->media = $media;
-    }
-
 }
