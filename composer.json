@@ -1,0 +1,10 @@
+{
+  "name": "bergwerk/bwrk-resources-slider",
+  "type": "typo3-cms-extension",
+  "description": "Slider functionality with page resources for TYPO3",
+  "homepage": "https://www.bergwerk.ag/",
+  "license": ["GPL-2.0+"],
+  "keywords": ["TYPO3 CMS", "slider", "page", "resource"],
+  "version": "1.1.4",
+  "minimum-stability":"stable"
+}
