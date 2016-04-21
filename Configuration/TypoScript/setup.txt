@@ -1,7 +1,13 @@
 plugin.tx_bwrkresourcesslider {
 	view {
-		templateRootPath = EXT:bwrk_resources_slider/Resources/Private/Templates/
-		layoutRootPath = EXT:bwrk_resources_slider/Resources/Private/Layouts/
-		partialRootPath = EXT:bwrk_resources_slider/Resources/Private/Partials/
+		templateRootPaths {
+			0 = EXT:bwrk_resources_slider/Resources/Private/Templates/
+		}
+		layoutRootPaths {
+			0 = EXT:bwrk_resources_slider/Resources/Private/Layouts/
+		}
+		partialRootPaths {
+			0 = EXT:bwrk_resources_slider/Resources/Private/Partials/
+		}
 	}
 }
