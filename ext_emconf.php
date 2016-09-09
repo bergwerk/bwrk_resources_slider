@@ -47,7 +47,8 @@ $EM_CONF[$_EXTKEY] = array(
     'version' => '1.1.4',
     'constraints' => array(
         'depends' => array(
-            'typo3' => '6.2.0-7.6.99'
+            'typo3' => '6.2.0-7.6.99',
+            'bwrk_utility' => '2.0.2-2.9.99'
         ),
         'conflicts' => array(),
         'suggests' => array(),

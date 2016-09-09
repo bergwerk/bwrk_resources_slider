@@ -30,6 +30,7 @@ namespace BERGWERK\BwrkResourcesSlider\Controller;
  ***************************************************************/
 
 use BERGWERK\BwrkResourcesSlider\Domain\Model\Page;
+use BERGWERK\BwrkUtility\Utility\CacheUtility;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 /**
@@ -45,8 +46,7 @@ class ViewController extends ActionController
     protected $pageRepository;
 
     /**
-     * @var \BERGWERK\BwrkResourcesSlider\Utility\CacheUtility
-     * @inject
+     * @var \BERGWERK\BwrkUtility\Utility\CacheUtility
      */
     protected $cacheUtility;
 
@@ -67,6 +67,8 @@ class ViewController extends ActionController
     {
         parent::__construct();
 
+        $this->cacheUtility = new CacheUtility('bwrk_resources_slider');
+
         $this->pid = $GLOBALS['TSFE']->id;
         $this->cacheIdentifier = $this->getCacheIdentifier();
     }
@@ -76,7 +78,9 @@ class ViewController extends ActionController
      */
     public function indexAction()
     {
-        $cachedHtmlOutput = $this->cacheUtility->getCache($this->cacheIdentifier);
+        $this->cacheUtility->setCacheIdentifier(array($this->cacheIdentifier));
+
+        $cachedHtmlOutput = $this->cacheUtility->getCache();
         if(!$cachedHtmlOutput) {
 
             $pageWithMedia = $this->getRecursiveParentWithMedia($this->pid);
@@ -87,7 +91,7 @@ class ViewController extends ActionController
             }
 
             $htmlOutput = $this->view->render();
-            $this->cacheUtility->setCache($htmlOutput, $this->cacheIdentifier);
+            $this->cacheUtility->setCache($htmlOutput);
 
             return $htmlOutput;
         }
