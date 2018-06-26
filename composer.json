@@ -1,10 +1,38 @@
 {
   "name": "bergwerk/bwrk-resources-slider",
-  "type": "typo3-cms-extension",
-  "description": "Slider functionality with page resources for TYPO3",
-  "homepage": "https://www.bergwerk.ag/",
-  "license": ["GPL-2.0+"],
+  "description": "Renders page media resources recursively in fluid for slide use.",
   "keywords": ["TYPO3 CMS", "slider", "page", "resource"],
-  "version": "1.1.4",
-  "minimum-stability":"stable"
+  "version": "1.1.5",
+  "minimum-stability":"stable",
+  "type": "typo3-cms-extension",
+  "homepage": "https://www.bergwerk.ag",
+  "authors": [
+      {
+          "name": "BERGWERK",
+          "role": "Developer",
+          "homepage": "https://www.bergwerk.ag"
+      }
+  ],
+  "license": ["GPL-2.0-or-later"],
+  "require": {
+    "typo3/cms-core": ">7.6"
+  },
+  "replace": {
+    "bwrk_resources_slider": "self.version",
+    "typo3-ter/bwrk_resources_slider": "self.version"
+  },
+  "autoload": {
+    "psr-4": {
+      "BERGWERK\\BwrkResourcesSlider\\": "Classes"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "2.0.0"
+    },
+    "typo3/cms": {
+      "cms-package-dir": "{$vendor-dir}/typo3/cms",
+      "web-dir": ".Build/Web"
+    }
+  }
 }
